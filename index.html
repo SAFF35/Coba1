@@ -62,37 +62,29 @@
             color: #FFFFFF;
         }
 
-        /* Kotak atau blok tetap */
-.welcome-block {
-    width: 100%; /* Atur lebar sesuai kebutuhan */
-    max-width: 600px; /* Atur lebar maksimum kotak */
-    background-color: #f0f0f0; /* Warna latar kotak */
-    border: 2px solid #8B0000; /* Border kotak */
-    padding: 10px; /* Spasi di dalam kotak */
-    margin: 20px auto; /* Tengah secara horizontal dan beri jarak */
-    border-radius: 8px; /* Opsional: buat sudut membulat */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opsional: tambahkan bayangan */
-    overflow: hidden; /* Sembunyikan bagian teks yang keluar */
-}
-
-/* Teks animasi tetap sama */
-.welcome-animation {
-    text-align: left;
+       .welcome-animation {
+    text-align: center; /* Teks di tengah secara horizontal */
     font-size: 1.7em;
     font-family: 'Rubik', sans-serif;
     color: #8B0000;
     text-shadow: 2px 2px 4px #fff;
+    margin: 12px 0;
+    overflow: hidden; /* Sembunyikan bagian teks di luar area */
     white-space: nowrap;
+    height: 50px; /* Tinggi tetap untuk area tampilan animasi */
+    position: relative; /* Atur posisi untuk pembatas */
 }
 
 .welcome-animation span {
     display: inline-block;
-    animation: scroll-text 7s linear infinite;
+    animation: scroll-text-vertical 7s linear infinite;
+    position: absolute;
+    top: 100%; /* Mulai dari luar bagian bawah */
 }
 
-@keyframes scroll-text {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+@keyframes scroll-text-vertical {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
 }
 
 
