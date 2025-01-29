@@ -63,17 +63,17 @@
         }
 
         .welcome-animation {
-            font-size: 2.5em;
-            font-family: 'Pacifico', cursive;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 3em;
+            font-family: 'Pacifico', cursive; /* Font unik dan kreatif */
             display: flex;
         }
 
+        /* Animasi perubahan warna pada setiap huruf */
         .welcome-animation span {
-            animation: color-change 2s linear infinite;
+            animation: color-change 1.5s infinite;
         }
 
-        /* Animasi perubahan warna pada tiap huruf dengan jeda waktu berbeda */
+        /* Animasi dengan jeda waktu agar warna bergantian */
         .welcome-animation span:nth-child(1) { animation-delay: 0s; }
         .welcome-animation span:nth-child(2) { animation-delay: 0.2s; }
         .welcome-animation span:nth-child(3) { animation-delay: 0.4s; }
@@ -81,11 +81,8 @@
         .welcome-animation span:nth-child(5) { animation-delay: 0.8s; }
         .welcome-animation span:nth-child(6) { animation-delay: 1s; }
         .welcome-animation span:nth-child(7) { animation-delay: 1.2s; }
-        .welcome-animation span:nth-child(8) { animation-delay: 1.4s; }
-        .welcome-animation span:nth-child(9) { animation-delay: 1.6s; }
-        .welcome-animation span:nth-child(10) { animation-delay: 1.8s; }
-        .welcome-animation span:nth-child(11) { animation-delay: 2s; }
 
+        /* Animasi perubahan warna */
         @keyframes color-change {
             0% { color: blue; }
             14% { color: yellow; }
