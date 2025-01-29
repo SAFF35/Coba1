@@ -62,30 +62,59 @@
             color: #FFFFFF;
         }
 
-       .welcome-animation {
-    text-align: center; /* Teks di tengah secara horizontal */
-    font-size: 1.5em;
-    font-family: 'Rubik', sans-serif;
-    color: #8B0000;
-    text-shadow: 2px 2px 4px #fff;
-    margin: 5px 0;
-    overflow: hidden; /* Sembunyikan bagian teks di luar area */
-    white-space: nowrap;
-    height: 50px; /* Tinggi tetap untuk area tampilan animasi */
-    position: relative; /* Atur posisi untuk pembatas */
-}
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Animation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
 
-.welcome-animation span {
-    display: inline-block;
-    animation: scroll-text-vertical 2s linear infinite;
-    position: absolute;
-    top: 100%; /* Mulai dari luar bagian bawah */
-}
+        .welcome-animation {
+            text-align: center;
+            font-size: 2.5em; /* Ukuran teks lebih besar */
+            font-family: 'Pacifico', cursive; /* Font yang lebih kreatif */
+            color: #8B0000;
+            text-shadow: 2px 2px 4px #fff;
+            overflow: hidden;
+            white-space: nowrap;
+            height: 80px; /* Tinggi kotak tampilan */
+            position: relative;
+            width: 100%; /* Lebar penuh agar terlihat di semua perangkat */
+        }
 
-@keyframes scroll-text-vertical {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(0); }
-}
+        .welcome-animation span {
+            display: inline-block;
+            animation: scroll-text-vertical 1.2s linear infinite; /* Animasi lebih cepat */
+            position: absolute;
+            top: 100%; /* Mulai dari luar bagian bawah */
+            left: 50%;
+            transform: translateX(-50%); /* Pusatkan teks secara horizontal */
+        }
+
+        @keyframes scroll-text-vertical {
+            0% { transform: translate(-50%, -100%); } /* Dimulai di luar bagian atas */
+            100% { transform: translate(-50%, 0); } /* Bergerak ke bagian bawah */
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-animation">
+        <span>Welcome to Our Website!</span>
+    </div>
+</body>
+</html>
+
 
 
         .logo-small {
