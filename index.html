@@ -64,6 +64,25 @@
 
         .welcome-animation {
             text-align: center;
+            font-size: 2.5em; /* Ukuran teks lebih besar */
+            font-family: 'Pacifico', cursive; /* Font yang lebih kreatif */
+            text-shadow: 2px 2px 4px #000;
+            animation: color-change 2s linear infinite; /* Animasi perubahan warna */
+        }
+
+        @keyframes color-change {
+            0% { color: blue; }
+            14% { color: yellow; }
+            28% { color: black; }
+            42% { color: green; }
+            56% { color: orange; }
+            70% { color: white; }
+            84% { color: purple; }
+            100% { color: blue; } /* Kembali ke warna awal */
+        }
+
+        .welcome-animation {
+            text-align: center;
             font-size: 2em; /* Ukuran teks lebih besar */
             font-family: 'Pacifico', cursive; /* Font yang lebih kreatif */
             color: #8B0000;
@@ -209,6 +228,11 @@
     <div class="welcome-animation">
         <span><b>Selamat Datang</b></span>
     </div>
+
+     <div class="welcome-animation">
+        <span><b>Selamat Datang</b></span>
+    </div>
+    
     <img class="logo-small" src="https://affiliate035.wordpress.com/wp-content/uploads/2025/01/20250113_192723.png?w=768" alt="Logo Smart Affiliate Future">
     <img class="logo-large" src="https://affiliate035.wordpress.com/wp-content/uploads/2025/01/20250124_235629.png?w=1024" alt="Platform SAF">
 
